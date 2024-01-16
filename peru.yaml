@@ -1,0 +1,114 @@
+imports:
+    arvo: ./full-desk
+    base-dev: ./full-desk
+    landscape: ./full-desk
+    elm-airlock: ./full-desk
+    landscape-apps: ./full-desk
+    landscape-dev: ./full-desk
+
+git module citadel:
+  url: https://github.com/ryjm/citadel
+  export: desk
+  pick:
+    - desk/lib/etch.hoon
+  rev: 5d4bb7e04e2c60a3c99f4b924fff600e55eee6a2
+
+git module landscape:
+  url: https://github.com/tloncorp/landscape
+  export: desk-dev
+  pick:
+    - desk-dev/lib
+    - desk-dev/sur
+    - desk-dev/mar
+  rev: 69f99f4ee99de599c172d8a7562dd2bf2654f31e
+
+git module landscape-apps:
+  url: https://github.com/tloncorp/landscape-apps
+  export: desk
+  pick:
+    - desk/sur/chat-0.hoon
+    - desk/sur/chat-1.hoon
+    - desk/sur/chat.hoon
+    - desk/sur/group.hoon
+    - desk/sur/groups.hoon
+    - desk/sur/meta.hoon
+    - desk/sur/epic.hoon
+    - desk/sur/cite.hoon
+    - desk/sur/group-store.hoon
+  rev: 6c80d6b3d213c69546edb0f55579815c65567ea1
+git module landscape-dev:
+  url: https://github.com/tloncorp/landscape-apps
+  export: landscape-dev
+  pick:
+    - landscape-dev/lib
+    - landscape-dev/sur
+  drop:
+    - landscape-dev/sur/hark-store.hoon
+  rev: 6c80d6b3d213c69546edb0f55579815c65567ea1
+
+git module elm-airlock:
+  url: https://github.com/ilyakooo0/airlock
+  export: example/urbit
+  pick:
+    - example/urbit/lib/noun-diff.hoon
+    - example/urbit/lib/sink.hoon
+  rev: 7e857379f10b362a9ee9e271312a4deb1fe65b66
+
+git module base-dev:
+  url: https://github.com/urbit/urbit
+  move:
+    pkg/base-dev: main
+  export: main
+  pick:
+    - main/mar/js.hoon
+    - main/mar/json.hoon
+    - main/mar/kelvin.hoon
+    - main/mar/mime.hoon
+    - main/mar/noun.hoon
+    - main/mar/png.hoon
+    - main/mar/bill.hoon
+    - main/mar/ship.hoon
+    - main/mar/xml.hoon
+    - main/mar/css.hoon
+    - main/mar/hoon.hoon
+    - main/mar/html.hoon
+    - main/lib/verb.hoon
+    - main/lib/server.hoon
+    - main/lib/language-server
+    - main/lib/shoe.hoon
+    - main/lib/sole.hoon
+    - main/lib/skeleton.hoon
+    - main/lib/strand.hoon
+    - main/lib/strandio.hoon
+    - main/lib/dbug.hoon
+    - main/mar/woff2.hoon
+    - main/mar/txt.hoon
+    - main/lib/default-agent.hoon
+    - main/lib/ethereum.hoon
+    - main/lib/ethio.hoon
+    - main/sur/json
+    - main/sur/sole.hoon
+    - main/sur/spider.hoon
+    - main/sur/verb.hoon
+
+git module arvo:
+  url: https://github.com/urbit/urbit
+  export: main
+  copy:
+    pkg/arvo/lib: ./main/lib
+    pkg/arvo/sur: ./main/sur
+    pkg/arvo/mar: ./main/mar
+  pick:
+    - main/lib/dice.hoon
+    - main/lib/naive.hoon
+    - main/lib/naive-transactions.hoon
+    - main/lib/plume.hoon
+    - main/lib/pprint.hoon
+    - main/sur/plum.hoon
+    - main/sur/dice.hoon
+    - main/sur/eth-watcher.hoon
+    - main/sur/xray.hoon
+    - main/lib/tiny.hoon
+    - main/lib/xray.hoon
+    - main/mar/jam.hoon
+  rev: f58fc8b4628f0c6423b923e861c17591b694f78a

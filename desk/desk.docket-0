@@ -1,0 +1,10 @@
+:~  title+'Vapor'
+    info+''
+    color+0xff.ffff
+    image+'https://freedom-club.sfo2.digitaloceanspaces.com/vapor.png'
+    version+[0 1 0]
+    website+'https://vaporware.network/'
+    license+'vaporware'
+    base+'vapor'
+    glob-http+['https://freedom-club.sfo2.digitaloceanspaces.com/glob-0v5.dkjij.2t1rq.5j1m3.f2djg.usfgg.glob' 0v5.dkjij.2t1rq.5j1m3.f2djg.usfgg]
+==
